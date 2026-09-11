@@ -6,7 +6,7 @@ while user.lower() != "quit":
     user = input("Enter stock quantity: ")
     if user != "quit":
         if user.isdigit():
-            print("a")
+            stock = int(user)
         else:
-            print("b")
+            print("Please enter a number.")
 
