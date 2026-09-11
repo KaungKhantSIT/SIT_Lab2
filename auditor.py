@@ -11,15 +11,16 @@ while user.lower() != "quit":
             print("Number of Failed/Rejected Entries:",fails)
             break
         if int(user) >= 0:
-            stock = int(user)
+            stock += int(user)
             print("Current Stock:",stock)
+            if stock > 500:
+                print("Alert: Total Inventory exceeds 500 units.")
+                print("Total Units Processed:",stock)
+                print("Number of Failed/Rejected Entries:",fails)
+                break
         else:
             fails += 1
             print("Please enter a positive number.")
     except ValueError:
         fails += 1
         print("Please enter a number.")
-
-    
-
-
